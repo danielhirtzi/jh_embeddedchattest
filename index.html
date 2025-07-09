@@ -27,10 +27,10 @@
 
         window.addEventListener("onEmbeddedMessagingReady", () => {            
 	      console.log( "Inside Prechat API!!" );
-	      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Source_Url" : "Test123" } );
+	      embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Source_Url__c" : "Test123" } );
         });
 
-        console.log( "Source_Url: " + Source_Url );
+        console.log( "Source_Url: " + Source_Url__c );
         
         embeddedservice_bootstrap.init(
           '00DUC000001CQZG',
