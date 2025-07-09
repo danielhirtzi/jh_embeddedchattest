@@ -12,19 +12,19 @@
     function initEmbeddedMessaging() {
       try {
         embeddedservice_bootstrap.settings.language = 'en_US';
-        /*
+        
         embeddedservice_bootstrap.settings.prechatDetails = [
           {
             "label": "Source URL",
             "value": window.location.href,
             "displayToAgent": true,
-            "transcriptFields": ["Source_URL__c"],
+            "transcriptFields": ["Source_Url"],
             "entityMaps": [],
             "entityName": "",
             "showOnCreate": true
           }
         ];
-        */
+        
         embeddedservice_bootstrap.init(
           '00DUC000001CQZG',
           'Omnichannel_Test_v1',
@@ -33,6 +33,7 @@
             scrt2URL: 'https://jameshardieeurope--jhfull.sandbox.my.salesforce-scrt.com'
           }
         );
+        console.log(
       } catch (err) {
         console.error('Error loading Embedded Messaging: ', err);
       }
