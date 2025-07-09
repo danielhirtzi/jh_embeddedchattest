@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Einstein Bot Test</title>
+</head>
+<body>
+  <h1>Welcome to the Einstein Bot Test Page</h1>
+
+  <!-- Your embedded messaging code starts here -->
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US';
+
+        embeddedservice_bootstrap.settings.prechatDetails = [
+          {
+            "label": "Source URL",
+            "value": window.location.href,
+            "displayToAgent": true,
+            "transcriptFields": ["Source_URL__c"],
+            "entityMaps": [],
+            "entityName": "",
+            "showOnCreate": true
+          }
+        ];
+
+        embeddedservice_bootstrap.init(
+          '00DUC000001CQZG',
+          'Omnichannel_Test_v1',
+          'https://jameshardieeurope--jhfull.sandbox.my.site.com/ESWOmnichannelTestv11745415074581',
+          {
+            scrt2URL: 'https://jameshardieeurope--jhfull.sandbox.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    }
+  </script>
+  <script type='text/javascript' src='https://jameshardieeurope--jhfull.sandbox.my.site.com/ESWOmnichannelTestv11745415074581/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+  <!-- Your embedded messaging code ends here -->
+
+</body>
+</html>
