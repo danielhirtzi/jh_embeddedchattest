@@ -30,11 +30,11 @@
         };
         console.log('SourceUrl: ', embeddedservice_bootstrap.prechatFields.SourceUrl);
 
-        window.addEventListener("onEmbeddedMessagingReady", () => {
+        window.addEventListener("onEmbeddedMessagingConversationRouted", () => {
         console.log("Received the onEmbeddedMessagingReady event…");
 
         // Send data to Salesforce
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"SourceUrl" : embeddedservice_bootstrap.prechatFields.SourceUrl});
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"SourceUrl" : window.location.href});
         });
         
         embeddedservice_bootstrap.init(
