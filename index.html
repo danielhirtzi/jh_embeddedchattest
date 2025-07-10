@@ -13,17 +13,6 @@
       try {
         embeddedservice_bootstrap.settings.language = 'en_US';
 
-        /*embeddedservice_bootstrap.prechatFieldComponents = [
-        {
-          "label": "Source Url",
-          "value": window.location.href,
-          "transcriptFields": [],
-          "displayToAgent": true,
-          "name": "SourceUrl", // This must match the Parameter API Name in Salesforce exactly
-          "type": "input"
-        }
-        ];*/
-
         // Set the SourceUrl field to the current page URL
         embeddedservice_bootstrap.prechatFields = {
           SourceUrl: window.location.href
